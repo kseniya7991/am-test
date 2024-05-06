@@ -1,0 +1,71 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+figure,
+blockquote,
+dl,
+dd {
+    margin: 0;
+}
+
+ul,
+ol,
+li {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+a,
+a:visited,
+a:active {
+    text-decoration: none;
+    //  color: inherit;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    line-height: 1.5;
+}
+
+input,
+button,
+textarea,
+select {
+    padding: 0;
+    border: none;
+    outline: none;
+    font-size: inherit;
+    font-family: inherit;
+    border-radius: 0;
+}
+
+input[type="submit"],
+button {
+    cursor: pointer;
+}
+
+input,
+textarea,
+button,
+select,
+a {
+    &:focus {
+        outline: none;
+    }
+}

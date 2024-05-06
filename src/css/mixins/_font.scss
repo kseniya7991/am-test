@@ -1,0 +1,14 @@
+@mixin fontSize($size: 14px, $height: $size, $weight: null, $color: null) {
+    @if $size != null {
+        font-size: $size;
+        line-height: $height;
+    }
+
+    @if $weight != null {
+        font-weight: $weight;
+    }
+
+    @if $color != null {
+        color: $color;
+    }
+}

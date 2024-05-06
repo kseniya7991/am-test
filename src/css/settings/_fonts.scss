@@ -1,0 +1,17 @@
+$Rubik: (
+    "Rubik-Bold": 700,
+    "Rubik-SemiBold": 600,
+    "Rubik-Medium": 500,
+    "Rubik-Regular": 400,
+    "Rubik-Light": 300,
+);
+
+@each $name, $value in $Rubik {
+    @font-face {
+        font-family: "Rubik";
+        src: url("../fonts/Rubik/#{$name}.ttf") format("truetype");
+        font-weight: $value;
+        font-style: normal;
+        font-display: swap;
+    }
+}

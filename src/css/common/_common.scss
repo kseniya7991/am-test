@@ -1,0 +1,18 @@
+body {
+    @include fontSize(14px, 20px, 400);
+    font-family: "Rubik", sans-serif;
+
+    @include color($color-black);
+
+    @include media-max-s() {
+        font-size: 12px;
+    }
+}
+
+main {
+    @include relative();
+}
+
+.no-link {
+    pointer-events: none;
+}
