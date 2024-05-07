@@ -23,7 +23,7 @@ https://www.figma.com/file/85XgiQJoLktnubscwrDt6F/Test(HTML)?node-id=0%3A1
 
 ## Live
 
-Проект выложен на vercel (https://am-test-tau.vercel.app/)[https://am-test-tau.vercel.app/]
+Проект выложен на vercel [https://am-test-tau.vercel.app/](https://am-test-tau.vercel.app/)
 
 ### Установка
 
