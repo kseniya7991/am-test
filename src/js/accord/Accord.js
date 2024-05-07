@@ -44,7 +44,6 @@ export class Accordion {
 
     init() {
         this.el.classList.add(CLASS_COLLAPSE);
-        console.log(this.el, this.trigger);
 
         if (this.isActive) {
             this.#toggleDataCollapse(true);
@@ -107,7 +106,6 @@ export class Accordion {
     };
 
     close(silent = false, callbacks = {}) {
-        console.log("test");
         if (this.isDisabled) return;
 
         this.#dispatch(this.el, "before-close", silent);
