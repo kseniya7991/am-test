@@ -1,0 +1,214 @@
+[
+    {
+      "brand": {
+        "name": "BWIN",
+        "img": "./img/bwin.png",
+        "imgMob": "./img/bwin-mob.png"
+      },
+      "bookmark": {
+        "img": "./img/svg/bookmark.svg",
+        "imgMob": "./img/svg/bookmark-mob.svg"
+      },
+      "title": "100% Up to 500&nbsp;$",
+      "payment" : [
+        {
+            "img": "./img/svg/mastercard.svg",
+            "alt": "mastercard"
+        },
+        {
+            "img": "./img/svg/discover.svg",
+            "alt": "discover"
+        },
+        {
+            "img": "./img/svg/american-express.svg",
+            "alt": "american express"
+        },
+        {
+            "img": "./img/svg/maestro.svg",
+            "alt": "maestro"
+        },
+        {
+            "img": "./img/svg/union-pay.svg",
+            "alt": "union pay"
+        },
+        {
+            "img": "./img/svg/jcb.svg",
+            "alt": "jcb"
+        },
+        {
+            "img": "./img/svg/american-express.svg",
+            "alt": "american express"
+        },
+        {
+            "img": "./img/svg/maestro.svg",
+            "alt": "maestro"
+        }
+      ],
+      "paymentMob" : [
+        {
+            "img": "./img/svg/mastercard.svg",
+            "alt": "mastercard"
+        },
+        {
+            "img": "./img/svg/discover.svg",
+            "alt": "discover"
+        },
+        {
+            "img": "./img/svg/american-express.svg",
+            "alt": "american express"
+        },
+        {
+            "img": "./img/svg/maestro.svg",
+            "alt": "maestro"
+        },
+        {
+            "img": "./img/svg/union-pay.svg",
+            "alt": "union pay"
+        },
+        {
+            "img": "./img/svg/jcb.svg",
+            "alt": "jcb"
+        }
+      ]
+    },
+    {
+      "brand": {
+        "name": "BWIN",
+        "img": "./img/bwin.png",
+        "imgMob": "./img/bwin-mob.png"
+      },
+      "bookmark": {
+        "img": "./img/svg/bookmark-orange.svg",
+        "imgMob": "./img/svg/bookmark-mob.svg"
+      },
+      "title": "100% Up to 500&nbsp;$",
+      "payment" : [
+        {
+            "img": "./img/svg/mastercard.svg",
+            "alt": "mastercard"
+        },
+        {
+            "img": "./img/svg/discover.svg",
+            "alt": "discover"
+        },
+        {
+            "img": "./img/svg/american-express.svg",
+            "alt": "american express"
+        },
+        {
+            "img": "./img/svg/maestro.svg",
+            "alt": "maestro"
+        },
+        {
+            "img": "./img/svg/union-pay.svg",
+            "alt": "union pay"
+        },
+        {
+            "img": "./img/svg/jcb.svg",
+            "alt": "jcb"
+        },
+        {
+            "img": "./img/svg/american-express.svg",
+            "alt": "american express"
+        },
+        {
+            "img": "./img/svg/maestro.svg",
+            "alt": "maestro"
+        }
+      ],
+      "paymentMob" : [
+        {
+            "img": "./img/svg/mastercard.svg",
+            "alt": "mastercard"
+        },
+        {
+            "img": "./img/svg/discover.svg",
+            "alt": "discover"
+        },
+        {
+            "img": "./img/svg/american-express.svg",
+            "alt": "american express"
+        },
+        {
+            "img": "./img/svg/maestro.svg",
+            "alt": "maestro"
+        },
+        {
+            "img": "./img/svg/union-pay.svg",
+            "alt": "union pay"
+        },
+        {
+            "img": "./img/svg/jcb.svg",
+            "alt": "jcb"
+        }
+      ]
+    },
+    {
+      "brand": {
+        "name": "BWIN",
+        "img": "./img/bwin.png",
+        "imgMob": "./img/bwin-mob.png"
+      },
+      "title": "100% Up to 500&nbsp;$",
+      "payment" : [
+        {
+            "img": "./img/svg/mastercard.svg",
+            "alt": "mastercard"
+        },
+        {
+            "img": "./img/svg/discover.svg",
+            "alt": "discover"
+        },
+        {
+            "img": "./img/svg/american-express.svg",
+            "alt": "american express"
+        },
+        {
+            "img": "./img/svg/maestro.svg",
+            "alt": "maestro"
+        },
+        {
+            "img": "./img/svg/union-pay.svg",
+            "alt": "union pay"
+        },
+        {
+            "img": "./img/svg/jcb.svg",
+            "alt": "jcb"
+        },
+        {
+            "img": "./img/svg/american-express.svg",
+            "alt": "american express"
+        },
+        {
+            "img": "./img/svg/maestro.svg",
+            "alt": "maestro"
+        }
+      ],
+      "paymentMob" : [
+        {
+            "img": "./img/svg/mastercard.svg",
+            "alt": "mastercard"
+        },
+        {
+            "img": "./img/svg/discover.svg",
+            "alt": "discover"
+        },
+        {
+            "img": "./img/svg/american-express.svg",
+            "alt": "american express"
+        },
+        {
+            "img": "./img/svg/maestro.svg",
+            "alt": "maestro"
+        },
+        {
+            "img": "./img/svg/union-pay.svg",
+            "alt": "union pay"
+        },
+        {
+            "img": "./img/svg/jcb.svg",
+            "alt": "jcb"
+        }
+      ]
+    }
+]

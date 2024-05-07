@@ -1,0 +1,61 @@
+<div class="bonus__content">
+    <article class="bonus__info">
+
+        <div class="bonus__brand-img">
+            <picture>
+                {{#if brand.imgMob}}
+                    <source
+                        media="(max-width: 479.9px )"
+                        srcset="{{brand.imgMob}}"
+                    />
+                {{/if}}
+                <img
+                    src="{{brand.img}}"
+                    alt="bwin"
+                />
+            </picture>
+        </div>
+
+        <div class="bonus__info-detail">
+            <div class="bonus__type">
+                <img
+                    class="bonus__type-img"
+                    src="./img/gift.png"
+                    alt="Тип бонуса"
+                />
+                <span class="bonus__type-text">Welcome
+                    bonus</span>
+            </div>
+            <h2 class="bonus__title">{{{title}}}</h2>
+            <p class="bonus__descr">
+                Lorem ipsum dolor sit amet consectetur
+                adipiscing elit lacus tempor,
+                vulputate id fames pulvinar curabitur faucibus.
+            </p>
+        </div>
+    </article>
+    <div class="bonus__content-wrap">
+        {{> bonus/bonus__pros}}
+        <div class="bonus__add">
+            {{> bonus/bonus__payment paymentData=payment}}
+            <button
+                type="button"
+                class="bonus__more js-accord__trigger accord__trigger"
+            >
+                <span class="bonus__more-text bonus__more-text_closed">More
+                    info</span>
+                <span class="bonus__more-text bonus__more-text_opened">Hide
+                    info</span>
+                <img
+                    src="./img/svg/down-arrow.svg"
+                    alt="arrow"
+                    class="bonus__more-icon"
+                />
+            </button>
+        </div>
+        <div class="bonus__buttons">
+            <button class="btn btn_green">Claim bonus</button>
+            <button class="btn btn_grey">Read Review</button>
+        </div>
+    </div>
+</div>

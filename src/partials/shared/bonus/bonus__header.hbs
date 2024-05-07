@@ -1,0 +1,32 @@
+<header class="bonus__header">
+    <div class="bonus__title-block">
+        <div class="bonus__number"></div>
+        <div class="bonus__icon">
+            <img
+                src="./img/svg/fire.svg"
+                alt="fire"
+            />
+        </div>
+        <span class="bonus__brand">{{brand.name}}</span>
+    </div>
+    {{#if bookmark}}
+        <div class="bonus__bookmark">
+            <picture>
+                <source
+                    media="(max-width: 427.9px)"
+                    srcset="{{bookmark.imgMob}}"
+                >
+                <img
+                    src="{{bookmark.img}}"
+                    alt="bookmark"
+                />
+            </picture>
+
+            <span class="bonus__bookmark-title">BEST BONUS</span>
+        </div>
+    {{/if}}
+    <div class="bonus__rating">
+        <span class="bonus__rating-result">5.0</span>
+        {{>shared/rating-stars}}
+    </div>
+</header>

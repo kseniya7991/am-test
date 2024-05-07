@@ -1,6 +1,8 @@
 .section-bonuses {
+    padding-top: 22px;
+
     .bonuses-list {
-        @include flex(column, $gap: 13px);
+        @include flex(column, $gap: 15px);
         @include size(100%);
 
         counter-reset: bonuses;
@@ -9,22 +11,46 @@
     .bonus {
         flex: 1;
 
-        $header-top-padding-desk: 25px;
-        $header-top-padding-mob: 15px;
-
         @include bgColor($color-grey-1);
         @include color($color-grey-text);
 
         border-radius: 15px;
 
-        &__header {
-            @include flex(row, center);
+        @include media-max-xs() {
+            border-radius: 10px;
+        }
 
-            padding: $header-top-padding-desk 15px;
+        &__body {
+            border-radius: 0 0 15px 15px;
+            overflow: hidden;
+
+            &[data-collapse="open"] {
+                .bonus__more-icon {
+                    transform: rotate(-180deg);
+                }
+
+                .bonus__more-text_closed {
+                    display: none;
+                }
+                .bonus__more-text_opened {
+                    display: block;
+                }
+            }
+
+            @include media-max-xs() {
+                border-radius: 0 0 10px 10px;
+            }
+        }
+
+        &__header {
+            @include relative();
+            @include flex(row, center, space-between);
+
+            padding: 24px 15px;
             border-bottom: 1px solid rgba($color: $color-grey-2, $alpha: 0.65);
 
             @include media-max-s() {
-                padding: $header-top-padding-mob 10px;
+                padding: 15px 10px;
             }
 
             @include media-max-xs() {
@@ -38,6 +64,7 @@
 
         &__number {
             @include flex();
+            @include minSize(12px);
 
             &::before {
                 @include relative();
@@ -50,6 +77,8 @@
             }
 
             @include media-max-s() {
+                @include minSize(9px);
+
                 &::before {
                     @include fontSize(14px, 17px);
                 }
@@ -58,7 +87,7 @@
 
         &__icon {
             @include imgWrap(24px, 24px);
-            margin-inline: 14px 10px;
+            margin-inline: 12px 10px;
 
             @include media-max-s() {
                 @include size(17px, 17px);
@@ -66,7 +95,7 @@
             }
 
             @include media-max-xs() {
-                margin-inline: 5px;
+                margin-inline: 3px 5px;
             }
         }
 
@@ -105,6 +134,7 @@
             @include media-max-xs() {
                 &-img {
                     aspect-ratio: 72 / 84;
+                    border-radius: 10px;
                 }
             }
         }
@@ -112,9 +142,9 @@
         &__bookmark {
             @include flex(row, center, center);
 
-            @include relative();
+            @include absolute($all: 0);
+            top: -5px;
             margin-inline: auto;
-            margin-top: calc(($header-top-padding-desk + 5px) * -1);
 
             @include imgWrap(221px, 42px);
 
@@ -129,11 +159,7 @@
 
             @include media-max-s() {
                 @include size(181px, 34px);
-
-                top: calc(($header-top-padding-mob + 5px) * -1);
-
-                top: 0;
-                margin-top: calc(($header-top-padding-mob + 5px) * -1);
+                margin-right: 59px;
 
                 &-title {
                     @include fontSize(12px, 14px);
@@ -142,6 +168,7 @@
 
             @include media-max-xs() {
                 @include size(141px, 32px);
+                margin-right: 64px;
 
                 &-title {
                     @include fontSize(10px, 12px);
@@ -169,7 +196,7 @@
 
             &-wrap {
                 @include size(100%);
-                @include flex(row);
+                @include flex(row, $justify: space-between);
             }
 
             @include media-max-md() {
@@ -177,7 +204,15 @@
             }
 
             @include media-max-s() {
-                padding: 14px 10px 15px;
+                padding: 15px 10px;
+
+                &-wrap {
+                    flex-direction: column;
+                }
+            }
+
+            @include media-max-xs() {
+                padding: 11px 10px;
 
                 &-wrap {
                     flex-direction: column;
@@ -204,7 +239,8 @@
 
             @include media-max-md() {
                 padding-bottom: 15px;
-                margin-bottom: 20px;
+                //Исходное значение 20px, 22px утсановлено для pixel-perfect
+                margin-bottom: 22px;
 
                 &::before {
                     content: "";
@@ -223,6 +259,16 @@
 
                 &-detail {
                     gap: 7px;
+                    margin-left: 15px;
+                }
+            }
+
+            @include media-max-xs() {
+                //Исходное значение 15px, 17px утсановлено для pixel-perfect
+                margin-bottom: 17px;
+
+                &-detail {
+                    margin-left: 10px;
                 }
             }
         }
@@ -260,16 +306,24 @@
         }
 
         &__pros {
-            @include flex(column, $justify: center, $gap: 15px);
-            margin-inline: 33px;
+            @include maxSize(249px);
+            @include size(100%);
+
+            margin-inline: 33px 30px;
+
+            display: grid;
+            align-self: center;
+
+            gap: 15px;
 
             i {
-                @include fontSize(17px);
+                font-size: 17px;
                 margin-right: 10px;
             }
 
             &-item {
                 @include flex(row, center);
+                @include size(null, max-content);
             }
 
             &-name {
@@ -281,17 +335,22 @@
             }
 
             @include media-max-s() {
+                @include size(100%);
+                @include maxSize(100%);
+
                 margin-inline: 0;
                 margin-bottom: 20px;
 
                 flex-direction: row;
                 flex-wrap: wrap;
 
+                grid-template-columns: repeat(2, max-content);
+
                 column-gap: 25px;
 
                 &-item {
                     @include size(100%);
-                    @include maxSize(calc((100% - 25px) / 2));
+                    @include maxSize(100%);
 
                     &:nth-of-type(3) {
                         order: 1;
@@ -309,12 +368,17 @@
             }
 
             @include media-max-xs() {
+                @include flex(row, center, flex-start);
+                flex-wrap: wrap;
+
+                row-gap: 10px;
                 column-gap: 15px;
                 justify-content: flex-start;
 
                 margin-bottom: 15px;
 
                 i {
+                    font-size: 14px;
                     margin-right: 5px;
                 }
 
@@ -330,22 +394,30 @@
         }
 
         &__add {
-            margin-inline: auto;
-            @include maxSize(calc(20px * 3 + 53px * 4));
+            margin-inline: 0 auto;
 
-            @include mediaRange($min_md, $max_lg) {
-                @include maxSize(calc(10px * 2 + 45px * 3));
+            @include size(calc(20px * 3 + 53px * 4));
+            @include minSize(calc(20px * 3 + 53px * 4));
+
+            &:first-child {
+                margin-inline: auto 0px;
+            }
+
+            @include mediaRange($min_md, 1250px) {
+                @include size(calc(10px * 2 + 45px * 3));
+                @include minSize(calc(10px * 2 + 45px * 3));
             }
 
             @include mediaRange($min_s, $max_sm) {
-                @include maxSize(calc(10px * 2 + 45px * 3));
+                @include size(calc(10px * 2 + 45px * 3));
+                @include minSize(calc(10px * 2 + 45px * 3));
             }
 
             @include media-max-s() {
                 order: 3;
 
+                @include minSize(unset);
                 @include size(100%);
-                @include maxSize(100%);
 
                 .bonus__payment {
                     display: none;
@@ -371,10 +443,10 @@
             }
 
             &-img {
-                @include maxSize(100%);
+                @include maxSize(100%, 100%);
             }
 
-            @include mediaRange($min_md, $max_lg) {
+            @include mediaRange($min_md, 1250px) {
                 column-gap: 10px;
                 &-item {
                     @include size(45px);
@@ -403,10 +475,11 @@
                 }
             }
 
-            @include media-max-s() {
+            @include media-max-xs() {
                 gap: 10px;
 
                 &-item {
+                    padding-inline: 11px;
                     @include size(calc((100% - 10px * 5) / 6), 24px);
                 }
             }
@@ -426,6 +499,8 @@
                 content: "";
                 @include relative();
                 @include size(100%, 2px);
+                margin-top: 2px;
+
                 @include bgColor($color-grey-accent);
             }
 
@@ -440,11 +515,17 @@
             &-text {
                 @include fontSize(13px, 15px, 400, $color-grey-accent);
                 white-space: nowrap;
+
+                &_opened {
+                    display: none;
+                }
             }
 
             &-icon {
                 @include size(15px, 15px);
                 margin-left: 5px;
+
+                @include transition(transform);
             }
 
             @include media-max-s() {
@@ -454,9 +535,10 @@
 
         &__buttons {
             @include size(180px);
+            @include minSize(180px);
             @include flex(column, $gap: 15px);
 
-            margin-left: 30px;
+            margin-left: 14px;
 
             @include media-max-s() {
                 margin-left: 0;
@@ -477,6 +559,9 @@
         }
 
         &__details {
+            border-radius: 0 0 15px 15px;
+            overflow: hidden;
+
             &-wrap {
                 padding: 15px;
                 @include flex(row);
@@ -494,24 +579,25 @@
                 @include size(100%);
                 @include maxSize(404px);
 
-                padding: 15px;
-                margin-left: 15px;
-
-                &:first-of-type {
-                    margin-left: 20px;
-                }
+                padding: 14px;
 
                 border-radius: 15px;
                 border: 1px solid $color-grey-2;
 
                 @include flex(column, $gap: 15px);
 
+                &-wrap {
+                    @include size(100%);
+                    @include flex(row, $gap: 15px);
+                    margin-left: 20px;
+                }
+
                 &-item {
                     i {
                         font-size: 25px;
                     }
 
-                    @include flex(row, center, $gap: 5px);
+                    @include flex(row, flex-start, $gap: 5px);
                     @include fontSize(14px, 25px, 400);
                 }
             }
@@ -522,28 +608,44 @@
                 }
             }
 
-            @include media-max-s() {
+            @include media-max-md() {
                 &-wrap {
                     flex-direction: column;
                 }
 
                 &-descr {
                     @include maxSize(100%);
-                    @include fontSize(12px, 20px);
                 }
 
                 &-list {
                     @include maxSize(100%);
 
-                    padding: 10px;
+                    padding: 9px;
 
-                    margin-left: 0;
-                    margin-top: 10px;
-
-                    &:first-of-type {
+                    &-wrap {
                         margin-left: 0;
                         margin-top: 15px;
                     }
+                }
+
+                .bonus__payment {
+                    margin-bottom: 15px;
+                }
+            }
+
+            @include media-max-s() {
+                &-wrap {
+                    margin-left: 0;
+                    padding: 10px;
+                }
+
+                &-descr {
+                    @include fontSize(12px, 20px);
+                }
+
+                &-list {
+                    gap: 10px;
+                    border-radius: 10px;
 
                     &-item {
                         i {
@@ -552,10 +654,11 @@
 
                         @include fontSize(12px, 14px);
                     }
-                }
 
-                .bonus__payment {
-                    margin-bottom: 15px;
+                    &-wrap {
+                        flex-direction: column;
+                        gap: 10px;
+                    }
                 }
             }
 
@@ -569,7 +672,7 @@
                 }
 
                 &-list {
-                    &:first-of-type {
+                    &-wrap {
                         margin-top: 10px;
                     }
                 }
@@ -579,5 +682,17 @@
                 }
             }
         }
+    }
+
+    @include media-max-s() {
+        padding-top: 20px;
+
+        .bonuses-list {
+            gap: 10px;
+        }
+    }
+
+    @include media-max-xs() {
+        padding-top: 21px;
     }
 }
