@@ -4,16 +4,273 @@
         <meta charset="UTF-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0,  user-scalable=0" />
-
-        <link rel="stylesheet" href="./css/index.css" />
-
-        <title>тестовое Biggiko</title>
+        <script src="https://kit.fontawesome.com/4508fd7924.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="../css/index.min.css" />
+        <title>Тестовое для AM</title>
     </head>
 
     <body class="loading">
         <div class="site-wrap">
-            <main class="main"></main>
+            <main class="main">
+                <section class="section section-bonuses">
+                    <div class="container">
+                        <ul class="bonuses-list">
+                            <ol class="bonus js-accord">
+                                <header class="bonus__header">
+                                    <div class="bonus__title-block">
+                                        <div class="bonus__number"></div>
+                                        <div class="bonus__icon">
+                                            <img src="./img/svg/fire.svg" alt="fire" />
+                                        </div>
+                                        <span class="bonus__brand">BWIN</span>
+                                    </div>
+                                    <div class="bonus__bookmark">
+                                        <img src="./img/svg/bookmark.svg" alt="bookmark" />
+                                        <span class="bonus__bookmark-title">BEST BONUS</span>
+                                    </div>
+                                    <div class="bonus__rating">
+                                        <span class="bonus__rating-result">5.0</span>
+                                        <div class="rating-stars">
+                                            <svg
+                                                class="rating-stars__common"
+                                                width="20"
+                                                height="20"
+                                                viewBox="0 0 20 20"
+                                                fill="none"
+                                                xmlns="http://www.w3.org/2000/svg"
+                                            >
+                                                <path
+                                                    id="full-star"
+                                                    d="M18.3333 8.41678C18.4166 8.00011 18.0833 7.50011 17.6666 7.50011L12.9166 6.83344L10.75 2.50011C10.6666 2.33344 10.5833 2.25011 10.4166 2.16678C9.99996 1.91678 9.49996 2.08344 9.24996 2.50011L7.16663 6.83344L2.41663 7.50011C2.16663 7.50011 1.99996 7.58344 1.91663 7.75011C1.58329 8.08344 1.58329 8.58344 1.91663 8.91678L5.33329 12.2501L4.49996 17.0001C4.49996 17.1668 4.49996 17.3334 4.58329 17.5001C4.83329 17.9168 5.33329 18.0834 5.74996 17.8334L9.99996 15.5834L14.25 17.8334C14.3333 17.9168 14.5 17.9168 14.6666 17.9168C14.75 17.9168 14.75 17.9168 14.8333 17.9168C15.25 17.8334 15.5833 17.4168 15.5 16.9168L14.6666 12.1668L18.0833 8.83344C18.25 8.75011 18.3333 8.58344 18.3333 8.41678Z"
+                                                    fill="#FF922E"
+                                                />
+                                            </svg>
+
+                                            <!-- В данном случае первое svg будет отличаться от последующих, но использую use для сокращения кода -->
+                                            <svg class="rating-stars__star">
+                                                <use href="#full-star"></use>
+                                            </svg>
+                                            <svg class="rating-stars__star">
+                                                <use href="#full-star"></use>
+                                            </svg>
+                                            <svg class="rating-stars__star">
+                                                <use href="#full-star"></use>
+                                            </svg>
+                                            <svg class="rating-stars__star">
+                                                <use href="#full-star"></use>
+                                            </svg>
+                                            <svg class="rating-stars__star">
+                                                <use href="#full-star"></use>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                </header>
+                                <div class="bonus__content">
+                                    <article class="bonus__info">
+                                        <div class="bonus__brand-img">
+                                            <picture>
+                                                <source media="(max-width: 479.9px )" srcset="./img/bwin-mob.png" />
+                                                <img src="./img/bwin.png" alt="bwin" />
+                                            </picture>
+                                        </div>
+
+                                        <div class="bonus__info-detail">
+                                            <div class="bonus__type">
+                                                <img class="bonus__type-img" src="./img/gift.png" alt="Тип бонуса" />
+                                                <span class="bonus__type-text">Welcome bonus</span>
+                                            </div>
+                                            <h2 class="bonus__title">100% Up to 500&nbsp;$</h2>
+                                            <p class="bonus__descr">
+                                                Lorem ipsum dolor sit amet consectetur adipiscing elit lacus tempor,
+                                                vulputate id fames pulvinar curabitur faucibus.
+                                            </p>
+                                        </div>
+                                    </article>
+                                    <div class="bonus__content-wrap">
+                                        <ul class="bonus__pros">
+                                            <li class="bonus__pros-item">
+                                                <i class="fa-solid fa-rocket" style="color: #0079f0"></i>
+                                                <span class="bonus__pros-name">Best odds</span>
+                                            </li>
+                                            <li class="bonus__pros-item">
+                                                <i class="fa-solid fa-rocket" style="color: #0079f0"></i>
+                                                <span class="bonus__pros-name">Casino</span>
+                                            </li>
+                                            <li class="bonus__pros-item">
+                                                <i class="fa-solid fa-rocket" style="color: #0079f0"></i>
+                                                <span class="bonus__pros-name">200+ Paymenth Method</span>
+                                            </li>
+                                            <li class="bonus__pros-item">
+                                                <i class="fa-solid fa-rocket" style="color: #0079f0"></i>
+                                                <span class="bonus__pros-name">Fast Payouts</span>
+                                            </li>
+                                        </ul>
+                                        <div class="bonus__add">
+                                            <ul class="bonus__payment">
+                                                <li class="bonus__payment-item">
+                                                    <img
+                                                        src="./img/svg/mastercard.svg"
+                                                        alt="mastercard"
+                                                        class="bonus__payment-img"
+                                                    />
+                                                </li>
+                                                <li class="bonus__payment-item">
+                                                    <img
+                                                        src="./img/svg/discover.svg"
+                                                        alt="discover"
+                                                        class="bonus__payment-img"
+                                                    />
+                                                </li>
+                                                <li class="bonus__payment-item">
+                                                    <img
+                                                        src="./img/svg/american-express.svg"
+                                                        alt="american express"
+                                                        class="bonus__payment-img"
+                                                    />
+                                                </li>
+                                                <li class="bonus__payment-item">
+                                                    <img
+                                                        src="./img/svg/maestro.svg"
+                                                        alt="maestro"
+                                                        class="bonus__payment-img"
+                                                    />
+                                                </li>
+                                                <li class="bonus__payment-item">
+                                                    <img
+                                                        src="./img/svg/union-pay.svg"
+                                                        alt="union pay"
+                                                        class="bonus__payment-img"
+                                                    />
+                                                </li>
+                                                <li class="bonus__payment-item">
+                                                    <img src="./img/svg/jcb.svg" alt="jcb" class="bonus__payment-img" />
+                                                </li>
+                                                <li class="bonus__payment-item">
+                                                    <img
+                                                        src="./img/svg/american-express.svg"
+                                                        alt="american express"
+                                                        class="bonus__payment-img"
+                                                    />
+                                                </li>
+                                                <li class="bonus__payment-item">
+                                                    <img
+                                                        src="./img/svg/maestro.svg"
+                                                        alt="maestro"
+                                                        class="bonus__payment-img"
+                                                    />
+                                                </li>
+                                            </ul>
+                                            <button type="button" class="bonus__more js-accord__head">
+                                                <span class="bonus__more-text">More info</span>
+                                                <img
+                                                    src="./img/svg/down-arrow.svg"
+                                                    alt="arrow"
+                                                    class="bonus__more-icon"
+                                                />
+                                            </button>
+                                        </div>
+                                        <div class="bonus__buttons">
+                                            <button class="btn btn_green">Claim bonus</button>
+                                            <button class="btn btn_grey">Read Review</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="bonus__details js-accord__body">
+                                    <article class="bonus__details-wrap">
+                                        <ul class="bonus__payment">
+                                            <li class="bonus__payment-item">
+                                                <img
+                                                    src="./img/svg/mastercard.svg"
+                                                    alt="mastercard"
+                                                    class="bonus__payment-img"
+                                                />
+                                            </li>
+                                            <li class="bonus__payment-item">
+                                                <img
+                                                    src="./img/svg/discover.svg"
+                                                    alt="discover"
+                                                    class="bonus__payment-img"
+                                                />
+                                            </li>
+                                            <li class="bonus__payment-item">
+                                                <img
+                                                    src="./img/svg/american-express.svg"
+                                                    alt="american express"
+                                                    class="bonus__payment-img"
+                                                />
+                                            </li>
+                                            <li class="bonus__payment-item">
+                                                <img
+                                                    src="./img/svg/maestro.svg"
+                                                    alt="maestro"
+                                                    class="bonus__payment-img"
+                                                />
+                                            </li>
+                                            <li class="bonus__payment-item">
+                                                <img
+                                                    src="./img/svg/union-pay.svg"
+                                                    alt="union pay"
+                                                    class="bonus__payment-img"
+                                                />
+                                            </li>
+                                            <li class="bonus__payment-item">
+                                                <img src="./img/svg/jcb.svg" alt="jcb" class="bonus__payment-img" />
+                                            </li>
+                                        </ul>
+                                        <p class="bonus__details-descr">
+                                            Potenti placerat in tempor aliquet ut porta fringilla inceptos, massa
+                                            senectus lacus volutpat morbi felis ultrices, cras nullam commodo nulla
+                                            litora phasellus ornare. Lorem ipsum dolor proin id fames pulvinar curabitur
+                                            faucibus. Potenti placerat in tempor aliquet ut porta fringilla inceptos,
+                                            massa senectus lacus volutpat morbi felis ultrices, cras nullam commodo
+                                            nulla litora phasellus ornare. Lorem ipsum dolor proin id fames pulvinar
+                                            curabitur faucibus.
+                                        </p>
+
+                                        <ul class="bonus__details-list">
+                                            <li class="bonus__details-list-item">
+                                                <i class="fa-solid fa-thumbs-up" style="color: #53af1b"></i>
+                                                Lorem ipsum dolor sit amet consectetur adipiscing
+                                            </li>
+                                            <li class="bonus__details-list-item">
+                                                <i class="fa-solid fa-thumbs-up" style="color: #53af1b"></i>
+                                                Lorem ipsum adipiscing
+                                            </li>
+                                            <li class="bonus__details-list-item">
+                                                <i class="fa-solid fa-thumbs-up" style="color: #53af1b"></i>
+                                                Lorem ipsum dolor sit amet adipiscing.
+                                            </li>
+                                            <li class="bonus__details-list-item">
+                                                <i class="fa-solid fa-thumbs-up" style="color: #53af1b"></i>
+                                                Lorem ipsum dolor sit amet consectetur adipiscing
+                                            </li>
+                                        </ul>
+                                        <ul class="bonus__details-list">
+                                            <li class="bonus__details-list-item">
+                                                <i class="fa-solid fa-thumbs-down" style="color: #ff4c34"></i>
+                                                Lorem ipsum dolor sit amet consectetur adipiscing
+                                            </li>
+                                            <li class="bonus__details-list-item">
+                                                <i class="fa-solid fa-thumbs-down" style="color: #ff4c34"></i>
+                                                Lorem ipsum adipiscing
+                                            </li>
+                                            <li class="bonus__details-list-item">
+                                                <i class="fa-solid fa-thumbs-down" style="color: #ff4c34"></i>
+                                                Lorem ipsum dolor sit amet adipiscing.
+                                            </li>
+                                            <li class="bonus__details-list-item">
+                                                <i class="fa-solid fa-thumbs-down" style="color: #ff4c34"></i>
+                                                Lorem ipsum dolor sit amet consectetur adipiscing
+                                            </li>
+                                        </ul>
+                                    </article>
+                                </div>
+                            </ol>
+                        </ul>
+                    </div>
+                </section>
+            </main>
         </div>
-        <script src="./index.js"></script>
+        <script src="../js/index.min.js"></script>
     </body>
 </html>
