@@ -15,7 +15,7 @@
                 <section class="section section-bonuses">
                     <div class="container">
                         <ul class="bonuses-list">
-                            <ol class="bonus js-accord">
+                            <ol class="bonus js-accord accord">
                                 <header class="bonus__header">
                                     <div class="bonus__title-block">
                                         <div class="bonus__number"></div>
@@ -160,8 +160,12 @@
                                                     />
                                                 </li>
                                             </ul>
-                                            <button type="button" class="bonus__more js-accord__head">
-                                                <span class="bonus__more-text">More info</span>
+                                            <button
+                                                type="button"
+                                                class="bonus__more js-accord__trigger accord__trigger"
+                                            >
+                                                <span class="bonus__more-text bonus__more-text_closed">More info</span>
+                                                <span class="bonus__more-text bonus__more-text_opened">Hide info</span>
                                                 <img
                                                     src="./img/svg/down-arrow.svg"
                                                     alt="arrow"
@@ -175,7 +179,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="bonus__details js-accord__body">
+                                <div class="bonus__details js-accord__body accord__body">
                                     <article class="bonus__details-wrap">
                                         <ul class="bonus__payment">
                                             <li class="bonus__payment-item">
