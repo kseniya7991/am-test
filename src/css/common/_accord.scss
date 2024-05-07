@@ -1,0 +1,26 @@
+.accord {
+    .accord__trigger {
+        cursor: pointer;
+    }
+
+    &.disabled,
+    &.collapsing {
+        pointer-events: none;
+    }
+
+    &.collapse:not(.active),
+    &:not(.active):not(.accord-inited) {
+        & > .accord__body {
+            display: none;
+        }
+    }
+
+    &.collapsing {
+        & > .accord__body {
+            overflow: hidden;
+            pointer-events: none;
+            height: 0;
+            transition: height 0.4s ease;
+        }
+    }
+}
