@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "deploy": "vercel --prod",
     "start": "webpack-dev-server --open",
     "webpack-dev": "webpack",
     "webpack-build": "webpack --env=build"
@@ -22,6 +23,7 @@
     "postcss-preset-env": "^9.5.11",
     "sass": "^1.76.0",
     "sass-loader": "^14.2.1",
+    "vercel": "^34.1.9",
     "webpack-dev-server": "^5.0.4"
   },
   "devDependencies": {
