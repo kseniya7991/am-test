@@ -1,0 +1,32 @@
+.btn {
+    padding: 19px;
+    border-radius: 10px;
+
+    @include flex(row, center, center);
+
+    @include fontSize(14px, 17px, 500);
+    text-align: center;
+    white-space: nowrap;
+
+    @include transition(#{color, background-color});
+
+    &_green {
+        @include bgColor($color-green);
+        @include color($color-white);
+    }
+
+    &_grey {
+        @include bgColor($color-grey-2, 0.49);
+        @include color($color-grey-dark-text);
+    }
+
+    @include hover {
+        @include bgColor($color-orange);
+        @include color($color-white);
+    }
+
+    @include media-max-s() {
+        padding: 15px;
+        @include fontSize(12px, 14px);
+    }
+}

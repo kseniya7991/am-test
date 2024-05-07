@@ -5,3 +5,17 @@
 @mixin bgColor($color, $alpha: 1) {
     background-color: rgba($color, $alpha);
 }
+
+@mixin linearGradient($angle: 0deg, $color1: null, $color2: null) {
+    @if $color1 != null and $color2 != null {
+        background: linear-gradient($angle, $color1, $color2);
+    }
+}
+
+@mixin textLinearGradient($angle: 0deg, $color1: null, $color2: null) {
+    @if $color1 != null and $color2 != null {
+        background: linear-gradient($angle, $color1, $color2);
+    }
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}

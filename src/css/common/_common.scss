@@ -1,6 +1,6 @@
 body {
     @include fontSize(14px, 20px, 400);
-    font-family: "Rubik", sans-serif;
+    @extend .ff-rubik;
 
     @include color($color-black);
 
@@ -15,4 +15,15 @@ main {
 
 .no-link {
     pointer-events: none;
+}
+
+.ff-rubik {
+    font-family: "Rubik", sans-serif;
+}
+
+.hov-opacity {
+    @include transition(opacity);
+    @include hover {
+        opacity: 0.6;
+    }
 }

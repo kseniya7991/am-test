@@ -11,7 +11,7 @@
 }
 
 @mixin mediaRange($minSize, $maxSize) {
-    @media (max-width: $maxSize) and (max-width: $minSize) {
+    @media (max-width: $maxSize) and (min-width: $minSize) {
         @content;
     }
 }

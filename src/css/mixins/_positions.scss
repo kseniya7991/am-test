@@ -5,13 +5,13 @@
         top: $top;
     }
     @if $left != null {
-        top: $left;
+        left: $left;
     }
     @if $bottom != null {
-        top: $bottom;
+        bottom: $bottom;
     }
     @if $right != null {
-        top: $right;
+        right: $right;
     }
     @if $all != null {
         inset: $all;

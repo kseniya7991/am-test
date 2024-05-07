@@ -1,0 +1,8 @@
+@mixin imgWrap($width: null, $height: null, $fill: contain) {
+    @include size($width, $height);
+
+    img {
+        @include size(100%, 100%);
+        object-fit: $fill;
+    }
+}

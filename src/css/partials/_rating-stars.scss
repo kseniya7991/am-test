@@ -1,0 +1,23 @@
+.rating-stars {
+    @include flex(row, center, flex-end);
+
+    svg {
+        @include size(20px, 20px);
+    }
+
+    @include media-min-s() {
+        &__common {
+            display: none;
+        }
+    }
+
+    @include media-max-s() {
+        svg {
+            @include size(17px, 17px);
+        }
+
+        &__star {
+            display: none;
+        }
+    }
+}
