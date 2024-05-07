@@ -2,9 +2,12 @@ const path = require("path");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
+const HandlebarsPlugin = require("handlebars-webpack-plugin");
 const TerserPlugin = require("terser-webpack-plugin");
 const CopyWebpackPlugin = require("copy-webpack-plugin");
 const postcssPresetEnv = require("postcss-preset-env");
+
+const bonuses = require("./store/bonuses.json");
 
 const isDev = process.argv[2] !== "--env=build";
 
@@ -15,18 +18,15 @@ const SCRIPTS = (env) =>
         outputFile: "./dist/index.min.js",
         cssFile: "./css/index.min.css",
         copyFiles: [
-            // {
-            //     from: "./src/img",
-            //     to: "./img",
-            // },
-            // {
-            //     from: "./src/video",
-            //     to: "./video",
-            // },
-            // {
-            //     from: "./src/fonts",
-            //     to: "./fonts",
-            // },
+            {
+                from: "./src/img",
+                to: "./img",
+            },
+
+            {
+                from: "./src/fonts",
+                to: "./fonts",
+            },
         ],
     });
 
@@ -113,12 +113,25 @@ const createConfig = ({ isDev, entry, outputFile, cssFile, copyFiles }) => {
             new MiniCssExtractPlugin({
                 filename: cssFile,
             }),
-            // new CopyWebpackPlugin({
-            //     patterns: copyFiles,
-            // }),
+            new CopyWebpackPlugin({
+                patterns: copyFiles,
+            }),
             new HtmlWebpackPlugin({
                 template: "./src/index.html",
                 filename: "index.html",
+            }),
+            new HandlebarsPlugin({
+                entry: path.resolve(process.cwd(), "src/pages/*.hbs"),
+                output: path.resolve(process.cwd(), "dist/[name].html"),
+                partials: [
+                    path.join(process.cwd(), "src", "components", "*.hbs"),
+                    path.join(process.cwd(), "src", "layouts", "*.hbs"),
+                    path.join(process.cwd(), "src", "partials", "*.hbs"),
+                    path.join(process.cwd(), "src", "partials", "**", "*.hbs"),
+                ],
+                data: {
+                    bonuses,
+                },
             }),
         ],
         devtool: !isDev ? false : "source-map",
