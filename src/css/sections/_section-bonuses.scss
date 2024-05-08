@@ -87,10 +87,13 @@
 
         &__icon {
             @include imgWrap(24px, 24px);
+            @include minSize(24px, 24px);
+
             margin-inline: 12px 10px;
 
             @include media-max-s() {
                 @include size(17px, 17px);
+                @include minSize(17px, 17px);
                 margin-inline: 8px 10px;
             }
 
@@ -147,6 +150,7 @@
             margin-inline: auto;
 
             @include imgWrap(221px, 42px);
+            @include minSize(221px);
 
             &-title {
                 @include fontSize(14px, 17px, 500, $color-white);
@@ -157,9 +161,39 @@
                 @include absolute($all: 0);
             }
 
+            @include media-max-md() {
+                position: relative;
+                top: -9px;
+
+                @include size(null, 1px);
+
+                align-self: flex-start;
+
+                margin-right: 100px;
+
+                img {
+                    @include size(null, 42px);
+                    top: calc(-20px);
+                }
+            }
+
+            @include media-max-sm() {
+                margin-right: 20px;
+            }
+
             @include media-max-s() {
-                @include size(181px, 34px);
-                margin-right: 59px;
+                @include size(181px);
+                @include minSize(max-content);
+
+                top: -5px;
+
+                padding-inline: 10px;
+                margin-right: 1px;
+
+                img {
+                    @include size(null, 34px);
+                    top: calc(-15px);
+                }
 
                 &-title {
                     @include fontSize(12px, 14px);
@@ -167,8 +201,11 @@
             }
 
             @include media-max-xs() {
-                @include size(141px, 32px);
-                margin-right: 64px;
+                @include size(141px);
+
+                img {
+                    @include size(null, 32px);
+                }
 
                 &-title {
                     @include fontSize(10px, 12px);
@@ -322,7 +359,7 @@
             }
 
             &-item {
-                @include flex(row, center);
+                @include flex(row, flex-start);
                 @include size(null, max-content);
             }
 
@@ -576,7 +613,7 @@
             }
 
             &-list {
-                @include size(100%);
+                @include size(100%, max-content);
                 @include maxSize(404px);
 
                 padding: 14px;
