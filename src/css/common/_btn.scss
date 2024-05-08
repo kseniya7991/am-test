@@ -6,7 +6,6 @@
 
     @include fontSize(14px, 17px, 500);
     text-align: center;
-    white-space: nowrap;
 
     @include transition(#{color, background-color});
 
